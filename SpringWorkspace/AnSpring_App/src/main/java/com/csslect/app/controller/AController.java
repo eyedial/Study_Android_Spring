@@ -132,6 +132,7 @@ public class AController {
 		model.addAttribute("date", date);	
 		model.addAttribute("dbImgPath", dbImgPath);	
 		
+		// 안드로이드에서 보낸 파일 받는부분
 		MultipartRequest multi = (MultipartRequest)req;
 		MultipartFile file = multi.getFile("image");
 		
@@ -178,7 +179,7 @@ public class AController {
 		File f = new File(req.getSession().getServletContext()
 				.getRealPath("/resources"));
 		if(!f.isDirectory()){
-		f.mkdir();
+			f.mkdir();
 		}	
 	}
 		
